@@ -6,22 +6,20 @@
   <meta name="viewport" content="width=device-width">
   <title>To-Do-List</title>
 
-  <link href="../style.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="../styleDropdown.css">
-
+  <link rel="stylesheet" href="./output.css">
   <link rel="shortcut icon" href="./Favicon/icon.png" type="image/x-icon">
 </head>
 
-<body>
-  <h1> To-Do-List </h1>
+<body class="flex flex-col m-5 p-4 bg-gray-100">
+  <h1 class="text-center text-3xl font-semibold"> To-Do-List </h1>
   <hr>
   <br>
 
-  <div id="botoes">
+  <div id="botoes" class="w-full flex justify-center">
 
     <div class="dropdown">
 
-      <button>Nova Tarefa</button>
+      <button class="btn-actions">Nova Tarefa</button>
 
       <div class="dropdown-menu">
         <ul>
@@ -47,11 +45,11 @@
 
     </div>
 
-    <button onclick="mostrarRemover()">Remover Tarefa</button>
+    <button onclick="mostrarRemover()" class="btn-actions">Remover Tarefa</button>
 
     <div class="dropdown">
       
-      <button>Editar Tarefa</button>
+      <button class="btn-actions">Editar Tarefa</button>
   
         <div class="dropdown-menu">
           <ul>
@@ -77,7 +75,7 @@
   
       </div>
 
-    <button onclick="mostrarConcluida()">Marcar como Concluída</button>
+    <button onclick="mostrarConcluida()" class="btn-actions">Marcar como Concluída</button>
     
 
   </div>
@@ -302,7 +300,7 @@
     </div>
   </div>
 
-  <script src="./JavaScript/script.js" type="module"></script>
+  <script src="../JavaScript/script.js" type="module"></script>
 </body>
 
 </html>
