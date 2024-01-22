@@ -21,7 +21,9 @@ class tarefasComEtiqueta extends tarefa {
   }
 
   getConcluida(){
-    return `A tarefa <strong>${this._nome.toUpperCase()}</strong> foi concluida em <strong>${document.getElementById('dataConclusao').value}</strong>. <br /> <strong>${this._etiqueta}</strong>`;
+    const date = new Date( Date.now() );
+
+    return `A tarefa <strong>${this._nome.toUpperCase()}</strong> foi marcada como concluida em <strong>${date.toLocaleDateString()}</strong>. <br /> <strong>${this._etiqueta}</strong>`;
 }
 }
 

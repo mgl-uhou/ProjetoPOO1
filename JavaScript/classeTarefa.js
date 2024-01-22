@@ -22,8 +22,12 @@ class tarefa{ // Aqui a classe que tem as propriedades dos objetos e o método �
     }
 
     getConcluida(){
-        return `A tarefa <strong>${this._nome.toUpperCase()}</strong> foi concluída em <strong>${document.getElementById('dataConclusao').value}</strong>.`;
+        const date = new Date( Date.now() );
+
+        return `A tarefa <strong>${this._nome.toUpperCase()}</strong> foi marcada como concluída em <strong>${date.toLocaleDateString()}</strong>.`;
     }
 }
+
+/* document.getElementById('dataConclusao').value */
 
 export default tarefa;

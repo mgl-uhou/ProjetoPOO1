@@ -17,9 +17,6 @@ const concluida = (x) => {
 
       /* Os campos de input são limpos */
       document.getElementById('nomeConcluida').value = '';
-      document.getElementById('dataConclusao').value = '';
-
-      //tarefa.listaDeTarefas[i].concluido();
 
       tarefasConcluidas.setAdicionar(tarefasPendentes.getMostrar()[i]);
       console.log("Lista de Concluídos do Objeto:");
