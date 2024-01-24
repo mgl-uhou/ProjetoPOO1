@@ -17,11 +17,13 @@ class tarefasComEtiqueta extends tarefa {
   }
 
   getInformation(){
-    return `<strong>Tipo da Tarefa:</strong> Tarefa com Etiqueta. <br/>  <strong>Tarefa:</strong> ${this._nome.toUpperCase()}. <strong>Etiqueta:</strong> ${this._etiqueta}. <br/> <strong>Descrição:</strong> ${this._descricao}`;
+    return `<strong>Tipo da Tarefa:</strong> Tarefa com Etiqueta. <br/>  <strong>Tarefa:</strong> ${this._nome.toLowerCase()}. <strong>Etiqueta:</strong> <span class="normal-case">${this._etiqueta}.</span> <br /> <strong>Descrição:</strong> ${this._descricao}`;
   }
 
   getConcluida(){
-    return `A tarefa <strong>${this._nome.toUpperCase()}</strong> foi concluida em <strong>${document.getElementById('dataConclusao').value}</strong>. <br /> <strong>${this._etiqueta}</strong>`;
+    const date = new Date( Date.now() );
+
+    return `A tarefa <strong class="capitalize">${this._nome.toLowerCase()}</strong> foi marcada como concluida em <strong>${date.toLocaleDateString()}</strong>. <br /> ${this._etiqueta}`;
 }
 }
 
