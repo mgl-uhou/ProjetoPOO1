@@ -7,15 +7,15 @@
   <title>To-Do-List</title>
 
   <link rel="stylesheet" href="./output.css">
-  <link rel="shortcut icon" href="./Favicon/icon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../Favicon/icon.png" type="image/x-icon">
 </head>
 
 <body class="flex flex-col m-5 p-4 bg-gray-100">
-  <h1 class="text-center text-3xl font-semibold"> To-Do-List </h1>
+  <h1 class="text-center text-3xl font-semibold mb-3"> To-Do-List </h1>
   <hr>
   <br>
 
-  <div id="botoes" class="w-full flex justify-center">
+  <div id="botoes" class="w-full flex justify-center gap-4 my-5">
 
     <div class="dropdown">
 
@@ -25,7 +25,7 @@
         <ul>
 
           <li>
-            <button onclick="mostrarNovaComum()">Tarefa Comum</button>
+            <button class="rounded-t" onclick="mostrarNovaComum()">Tarefa Comum</button>
           </li>
 
           <li>
@@ -37,7 +37,7 @@
           </li>
 
           <li>
-            <button onclick="mostrarNovaRepetitiva()">Tarefa Repetitiva</button>
+            <button class="rounded-b" onclick="mostrarNovaRepetitiva()">Tarefa Repetitiva</button>
           </li>
 
         </ul>
@@ -55,7 +55,7 @@
           <ul>
   
             <li>
-              <button onclick="mostrarEditarComum()">Tarefa Comum</button>
+              <button class="rounded-t" onclick="mostrarEditarComum()">Tarefa Comum</button>
             </li>
   
             <li>
@@ -67,7 +67,7 @@
             </li>
   
             <li>
-              <button onclick="mostrarEditarRepetitiva()">Tarefa Repetitiva</button>
+              <button class="rounded-b" onclick="mostrarEditarRepetitiva()">Tarefa Repetitiva</button>
             </li>
   
           </ul>
