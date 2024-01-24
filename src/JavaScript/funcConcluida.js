@@ -11,7 +11,7 @@ const concluida = (x) => {
     if(tarefasPendentes.getMostrar()[i].getNome() === x) /** Esse if testa se o campo de texto foi preenchido para só então executar as funcionalidades da função. */ {
 
       const novoItem = document.createElement('li'); // É criado um novo item na lista de Tarefas Concluídas do HTML do site. 
-      //novoItem.innerHTML = `A tarefa <strong>${x.toUpperCase()}</strong> foi concluida em <strong>${document.getElementById('dataConclusao').value}</strong>.`;
+      
       novoItem.innerHTML = tarefasPendentes.getMostrar()[i].getConcluida();
       listaConcluidos.appendChild(novoItem); // Aqui as informações que aparecerão no site são organizadas.
 

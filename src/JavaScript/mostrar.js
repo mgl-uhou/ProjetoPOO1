@@ -13,89 +13,100 @@ const esconder = () => {
 
     const marcarTarefa = document.getElementById('marcarTarefa');
   
-    novaTarefaComum.style.display = 'none';
-    novaTarefaComEtiqueta.style.display = 'none';
-    novaTarefaPrioritaria.style.display = 'none';
-    novaTarefaRepetitiva.style.display = 'none';
+    novaTarefaComum.classList.add( 'hidden' );
+    novaTarefaComEtiqueta.classList.add( 'hidden' );
+    novaTarefaPrioritaria.classList.add( 'hidden' );
+    novaTarefaRepetitiva.classList.add( 'hidden' );
 
-    removerTarefa.style.display = 'none';
+    removerTarefa.classList.add( 'hidden' );
 
-    editarTarefaComum.style.display = 'none';
-    editarTarefaComEtiqueta.style.display = 'none';
-    editarTarefaPrioritaria.style.display = 'none';
-    editarTarefaRepetitiva.style.display = 'none';
+    editarTarefaComum.classList.add( 'hidden' );
+    editarTarefaComEtiqueta.classList.add( 'hidden' );
+    editarTarefaPrioritaria.classList.add( 'hidden' );
+    editarTarefaRepetitiva.classList.add( 'hidden' );
 
-    marcarTarefa.style.display = 'none';
+    marcarTarefa.classList.add( 'hidden' );
 }
 
 const mostrarNovaComum = () => {
     esconder();
   
     const novaTarefa = document.getElementById('novaTarefa');
-    novaTarefa.style.display = 'block';
+    novaTarefa.classList.remove( 'hidden' );
+    novaTarefa.classList.remove( 'hidden' );
+    novaTarefa.classList.add( 'flex' );
 }
 
 const mostrarNovaComEtiqueta = () => {
     esconder();
   
     const novaTarefa = document.getElementById('novaTarefaComEtiqueta');
-    novaTarefa.style.display = 'block';
+    novaTarefa.classList.remove( 'hidden' );
+    novaTarefa.classList.add( 'flex' );
 }
 
 const mostrarNovaPrioritaria = () => {
     esconder();
   
     const novaTarefa = document.getElementById('novaTarefaPrioritária');
-    novaTarefa.style.display = 'block';
+    novaTarefa.classList.remove( 'hidden' );
+    novaTarefa.classList.add( 'flex' );
 }
 
 const mostrarNovaRepetitiva = () => {
     esconder();
   
     const novaTarefa = document.getElementById('novaTarefaRepetitiva');
-    novaTarefa.style.display = 'block';
+    novaTarefa.classList.remove( 'hidden' );
+    novaTarefa.classList.add( 'flex' );
 }
 
 const mostrarRemover = () => {
     esconder();
   
     const removerTarefa = document.getElementById('removerTarefa');
-    removerTarefa.style.display = 'block';
+    removerTarefa.classList.remove( 'hidden' );
+    removerTarefa.classList.add( 'flex' );
 }
 
 const mostrarEditarComum = () => {
     esconder();
   
     const editarTarefa = document.getElementById('editarTarefaComum');
-    editarTarefa.style.display = 'block';
+    editarTarefa.classList.remove( 'hidden' );
+    editarTarefa.classList.add( 'flex' );
 }
 
 const mostrarEditarComEtiqueta = () => {
     esconder();
   
     const editarTarefa = document.getElementById('editarTarefaComEtiqueta'); 
-    editarTarefa.style.display = 'block';
+    editarTarefa.classList.remove( 'hidden' );
+    editarTarefa.classList.add( 'flex' );
 }
 
 const mostrarEditarPrioritaria = () => {
     esconder();
   
     const editarTarefa = document.getElementById('editarTarefaPrioritaria');
-    editarTarefa.style.display = 'block';
+    editarTarefa.classList.remove( 'hidden' );
+    editarTarefa.classList.add( 'flex' );
 }
 
 const mostrarEditarRepetitiva = () => {
     esconder();
   
     const editarTarefa = document.getElementById('editarTarefaRepetitiva');
-    editarTarefa.style.display = 'block';
+    editarTarefa.classList.remove( 'hidden' );
+    editarTarefa.classList.add( 'flex' );
 }
   
 const mostrarConcluida = () => {
     esconder();
 
     const marcarTarefa = document.getElementById('marcarTarefa');
-    marcarTarefa.style.display = 'block';
+    marcarTarefa.classList.remove( 'hidden' );
+    marcarTarefa.classList.add( 'flex' );
 }
 
 export {mostrarNovaComum, mostrarNovaComEtiqueta, mostrarNovaPrioritaria, mostrarNovaRepetitiva, mostrarRemover, mostrarEditarComum, mostrarEditarComEtiqueta, mostrarEditarPrioritaria, mostrarEditarRepetitiva, mostrarConcluida};

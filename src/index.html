@@ -10,12 +10,12 @@
   <link rel="shortcut icon" href="../Favicon/icon.png" type="image/x-icon">
 </head>
 
-<body class="flex flex-col m-5 p-4 bg-gray-100">
+<body class="flex flex-col m-5 p-4 bg-gray-200">
   <h1 class="text-center text-3xl font-semibold mb-3"> To-Do-List </h1>
-  <hr>
+  <hr class="border-gray-400">
   <br>
 
-  <div id="botoes" class="w-full flex justify-center gap-4 my-5">
+  <div id="botoes" class="w-full flex justify-center gap-4 my-5 flex-wrap">
 
     <div class="dropdown">
 
@@ -80,12 +80,12 @@
 
   </div>
   
-  <div id="gerenciaTarefas" >
+  <div id="gerenciaTarefas" class="flex justify-center h-full wrap" >
 
     <div id="novaTarefa" class="tarefa">
-      <h3>Nova Tarefa Comum:</h3> 
+      <h2 class="text-xl mb-3">Nova Tarefa Comum:</h2> 
     
-       <form> <!-- O form coletará os dados necessários para a função que o botão chama. -->
+       <form class="flex flex-col"> <!-- O form coletará os dados necessários para a função que o botão chama. -->
         <label for="nomeTarefa">Nome:</label>
         <input type="text" id="nomeTarefa" placeholder="Nome da tarefa..."> <br>
 
@@ -94,13 +94,13 @@
       </form>
       <br>
   
-      <button class="buttonAdd" onclick="adicionarComum()">Adicionar</button> <!-- O botão chama a função que fará o site funcionar. -->
+      <button class="btn-actions-secondary" onclick="adicionarComum()">Adicionar</button> <!-- O botão chama a função que fará o site funcionar. -->
     </div>
 
     <div id="novaTarefaComEtiqueta" class="tarefa">
-      <h3>Nova Tarefa com Etiqueta:</h3> 
+      <h2 class="text-xl mb-3">Nova Tarefa com Etiqueta:</h2> 
     
-       <form> <!-- O form coletará os dados necessários para a função que o botão chama. -->
+       <form class="flex flex-col"> <!-- O form coletará os dados necessários para a função que o botão chama. -->
         <label for="nomeTarefaComEtiqueta">Nome:</label>
         <input type="text" id="nomeTarefaComEtiqueta" placeholder="Nome da tarefa..."> <br>
 
@@ -108,18 +108,18 @@
         <textarea id="descricaoNovaTarefaComEtiqueta" cols="25" rows="2" placeholder="Descrição..."></textarea>
         
         <label for="etiqueta">Etiqueta da Tarefa:</label>
-        <input type="text" id="etiqueta" value="#"> <br>
+        <input type="text" id="etiqueta" value="#">
   
       </form>
       <br>
   
-      <button class="buttonAdd" onclick="adicionarComEtiqueta()">Adicionar</button> <!-- O botão chama a função que fará o site funcionar. -->
+      <button class="btn-actions-secondary" onclick="adicionarComEtiqueta()">Adicionar</button> <!-- O botão chama a função que fará o site funcionar. -->
     </div>
 
     <div id="novaTarefaPrioritária" class="tarefa">
-      <h3>Nova Tarefa Prioritária:</h3> 
+      <h2 class="text-xl mb-3">Nova Tarefa Prioritária:</h2> 
     
-       <form> <!-- O form coletará os dados necessários para a função que o botão chama. -->
+       <form class="flex flex-col"> <!-- O form coletará os dados necessários para a função que o botão chama. -->
         <label for="nomeTarefaPrioritaria">Nome:</label>
         <input type="text" id="nomeTarefaPrioritaria" placeholder="Nome da tarefa..."> <br>
 
@@ -138,13 +138,13 @@
       </form>
       <br>
   
-      <button class="buttonAdd" onclick="adicionarPrioritaria()">Adicionar</button> <!-- O botão chama a função que fará o site funcionar. -->
+      <button class="btn-actions-secondary" onclick="adicionarPrioritaria()">Adicionar</button> <!-- O botão chama a função que fará o site funcionar. -->
     </div>
 
     <div id="novaTarefaRepetitiva" class="tarefa">
-      <h3>Nova Tarefa Repetitiva:</h3> 
+      <h2 class="text-xl mb-3">Nova Tarefa Repetitiva:</h2> 
     
-       <form> <!-- O form coletará os dados necessários para a função que o botão chama. -->
+       <form class="flex flex-col"> <!-- O form coletará os dados necessários para a função que o botão chama. -->
         <label for="nomeTarefaRepetitiva">Nome:</label>
         <input type="text" id="nomeTarefaRepetitiva" placeholder="Nome da tarefa..."> <br>
 
@@ -163,26 +163,26 @@
       </form>
       <br>
   
-      <button class="buttonAdd" onclick="adicionarRepetitiva()">Adicionar</button> <!-- O botão chama a função que fará o site funcionar. -->
+      <button class="btn-actions-secondary" onclick="adicionarRepetitiva()">Adicionar</button> <!-- O botão chama a função que fará o site funcionar. -->
     </div>
 
     <div id="removerTarefa" class="tarefa">
-      <h3>Remover Tarefa:</h3>
+      <h2 class="text-xl mb-3">Remover Tarefa:</h2>
     
-      <form> <!-- O form coletará os dados necessários para a função que o botão chama. -->
+      <form class="flex flex-col"> <!-- O form coletará os dados necessários para a função que o botão chama. -->
         <label for="remover">Nome:</label>
         <input type="text" id="remover" placeholder="Nome da tarefa...">
       </form>
   
       <br> 
       
-      <button id="buttonRemove" onclick="remover(document.getElementById('remover').value.toUpperCase())">Remover</button> <!-- O botão chama a função que fará o site funcionar. -->
+      <button id="buttonRemove" class="btn-actions-secondary" onclick="remover(document.getElementById('remover').value.toLowerCase())">Remover</button> <!-- O botão chama a função que fará o site funcionar. -->
     </div>
 
     <div id="editarTarefaComum" class="tarefa">
-      <h3>Editar Tarefa Comum:</h3>
+      <h2 class="text-xl mb-3">Editar Tarefa Comum:</h2>
 
-      <form> <!-- O form coletará os dados necessários para a função que o botão chama. -->
+      <form class="flex flex-col"> <!-- O form coletará os dados necessários para a função que o botão chama. -->
         <label for="editarNome">Nome:</label>
         <input type="text" id="editarNome" placeholder="Nome da tarefa editável..."> <br>
 
@@ -193,13 +193,13 @@
 
       <br>
 
-      <button class="buttonEdita" onclick="editarTarefaComum()">Editar</button> <!-- O botão chama a função que fará o site funcionar. -->
+      <button class="btn-actions-secondary" onclick="editarTarefaComum()">Editar</button> <!-- O botão chama a função que fará o site funcionar. -->
     </div>
 
     <div id="editarTarefaComEtiqueta" class="tarefa">
-      <h3>Editar Tarefa com Etiqueta:</h3> 
+      <h2 class="text-xl mb-3">Editar Tarefa com Etiqueta:</h2> 
     
-       <form> <!-- O form coletará os dados necessários para a função que o botão chama. -->
+       <form class="flex flex-col"> <!-- O form coletará os dados necessários para a função que o botão chama. -->
         <label for="nomeEditarTarefaComEtiqueta">Nome:</label>
         <input type="text" id="nomeEditarTarefaComEtiqueta" placeholder="Nome da tarefa..."> <br>
 
@@ -210,15 +210,14 @@
         <input type="text" id="novaEtiqueta" value="#"> <br>
   
       </form>
-      <br>
   
-      <button class="buttonEdita" onclick="editarTarefaComEtiqueta()">Editar</button> <!-- O botão chama a função que fará o site funcionar. -->
+      <button class="btn-actions-secondary" onclick="editarTarefaComEtiqueta()">Editar</button> <!-- O botão chama a função que fará o site funcionar. -->
     </div>
 
     <div id="editarTarefaPrioritaria" class="tarefa">
-      <h3>Editar Tarefa Prioritária:</h3> 
+      <h2 class="text-xl mb-3">Editar Tarefa Prioritária:</h2> 
     
-       <form> <!-- O form coletará os dados necessários para a função que o botão chama. -->
+       <form class="flex flex-col"> <!-- O form coletará os dados necessários para a função que o botão chama. -->
         <label for="nomeEditarTarefaPrioritaria">Nome:</label>
         <input type="text" id="nomeEditarTarefaPrioritaria" placeholder="Nome da tarefa..."> <br>
 
@@ -237,13 +236,13 @@
       </form>
       <br>
   
-      <button class="buttonEdita" onclick="editarTarefaPrioritaria()">Editar</button> <!-- O botão chama a função que fará o site funcionar. -->
+      <button class="btn-actions-secondary" onclick="editarTarefaPrioritaria()">Editar</button> <!-- O botão chama a função que fará o site funcionar. -->
     </div>
 
     <div id="editarTarefaRepetitiva" class="tarefa">
-      <h3>Editar Tarefa Repetitiva:</h3> 
+      <h2 class="text-xl mb-3">Editar Tarefa Repetitiva:</h2> 
     
-       <form> <!-- O form coletará os dados necessários para a função que o botão chama. -->
+       <form class="flex flex-col"> <!-- O form coletará os dados necessários para a função que o botão chama. -->
         <label for="nomeEditarTarefaRepetitiva">Nome:</label>
         <input type="text" id="nomeEditarTarefaRepetitiva" placeholder="Nome da tarefa..."> <br>
 
@@ -262,37 +261,37 @@
       </form>
       <br>
   
-      <button class="buttonEdita" onclick="editarTarefaRepetitiva()">Editar</button> <!-- O botão chama a função que fará o site funcionar. -->
+      <button class="btn-actions-secondary" onclick="editarTarefaRepetitiva()">Editar</button> <!-- O botão chama a função que fará o site funcionar. -->
     </div>
 
     <div id="marcarTarefa" class="tarefa">
-      <h3>Marcar como Concluída:</h3>
+      <h2 class="text-xl mb-3">Marcar como Concluída:</h2>
 
-      <form> <!-- O form coletará os dados necessários para a função que o botão chama. --> 
+      <form class="flex flex-col"> <!-- O form coletará os dados necessários para a função que o botão chama. --> 
         <label for="nomeConcluida">Nome da tarefa concluída:</label>
-        <input type="text" id="nomeConcluida" placeholder="Nome da tarefa concluída..."> <br>
+        <input type="text" id="nomeConcluida" placeholder="Nome da tarefa concluída...">
       </form>
 
       <br>
   
-      <button id="buttonConclui" onclick="concluida(document.getElementById('nomeConcluida').value.toUpperCase())">Marcar</button> <!-- O botão chama a função que fará o site funcionar. -->
+      <button id="buttonConclui" class="btn-actions-secondary" onclick="concluida(document.getElementById('nomeConcluida').value.toLowerCase())">Marcar</button> <!-- O botão chama a função que fará o site funcionar. -->
     </div>
     
   </div>
   <br />
   
-  <div id="campoTarefas">
+  <div id="campoTarefas" class="flex justify-evenly">
     
-    <div class="listaTarefas">
-      <h2> - Tarefas Pendentes:</h2>
+    <div class="listaTarefas capitalize">
+      <h2 class="text-center text-3xl"> - Tarefas Pendentes:</h2>
 
-      <ol id="tarefasPendentes">
+      <ol id="tarefasPendentes" class="list-decimal">
         <!-- Aqui serão adicionados os itens da lista de tarefas concluídas -->
       </ol>
     </div>
 
     <div id="listaTarefas">
-      <h2> - Tarefas Concluídas:</h2>
+      <h2 class="text-center text-3xl"> - Tarefas Concluídas:</h2>
 
       <ul id="tarefasConcluidas">
         <!-- Aqui serão adicionados os itens que foram retirados da lista de Tarefas Pendentes, que agora foram marcados como concluído. -->

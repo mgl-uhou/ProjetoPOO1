@@ -4,7 +4,7 @@
 
 @layer components{
     .btn-actions{
-        @apply text-sm bg-blue-400 px-4 py-1 rounded-full hover:bg-blue-500 transition ease-in-out duration-300 w-40 h-12 flex justify-center items-center;
+        @apply text-sm bg-blue-400 px-4 py-1 rounded-full hover:bg-blue-500 transition ease-in-out duration-300 min-w-40 h-12 flex justify-center items-center;
     }
 
     /* Começo da estilização do Dropdown */
@@ -30,4 +30,20 @@
         @apply flex;
     }
     /* Fim da estilização do Dropdown */
+
+    .tarefa{
+        @apply mt-10 bg-blue-300 flex-col p-5 rounded-md hidden;
+    }
+    .tarefa input{
+        @apply text-sm p-2 rounded bg-blue-200 outline-none;
+    }
+    .tarefa textarea{
+        @apply text-sm p-2 rounded bg-blue-200 outline-none;
+    }
+    .tarefa select{
+        @apply text-sm p-2 rounded bg-blue-200 outline-none;
+    }
+    .btn-actions-secondary{
+        @apply border border-blue-400 rounded-md text-gray-500 hover:ring hover:ring-blue-400 hover:text-black transition ease-in-out duration-300;
+    }
 }

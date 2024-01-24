@@ -14,7 +14,7 @@ class tarefa{ // Aqui a classe que tem as propriedades dos objetos e o método �
     }
 
     getInformation(){
-        return `<strong>Tipo da Tarefa:</strong> Tarefa Comum. <br/> <strong>Tarefa:</strong> ${this._nome.toUpperCase()}. <br /> <strong>Descrição:</strong> ${this._descricao}`; // Aqui as informações que aparecerão no site são organizadas.
+        return `<strong>Tipo da Tarefa:</strong> Tarefa Comum. <br/> <strong>Tarefa:</strong> ${this._nome.toLowerCase()}. <br /> <strong>Descrição:</strong> ${this._descricao}`; // Aqui as informações que aparecerão no site são organizadas.
     }
 
     getNome(){
@@ -24,7 +24,7 @@ class tarefa{ // Aqui a classe que tem as propriedades dos objetos e o método �
     getConcluida(){
         const date = new Date( Date.now() );
 
-        return `A tarefa <strong>${this._nome.toUpperCase()}</strong> foi marcada como concluída em <strong>${date.toLocaleDateString()}</strong>.`;
+        return `A tarefa <strong class="capitalize">${this._nome.toLowerCase()}</strong> foi marcada como concluída em <strong>${date.toLocaleDateString()}</strong>.`;
     }
 }
 

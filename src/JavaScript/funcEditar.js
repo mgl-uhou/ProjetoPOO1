@@ -14,7 +14,7 @@ const editar = (objeto, x, i) => {
 }
 
 const editarTarefaComum = () => { // Arrow Function que edita a tarefa escolhida
-    const x = document.getElementById('editarNome').value.toUpperCase(); // Refenrenciando a tarefa que será editada.
+    const x = document.getElementById('editarNome').value.toLowerCase(); // Refenrenciando a tarefa que será editada.
   
     for(let i = 0; i < tarefasPendentes.getMostrar().length; i++) /** Procura o elemento que será editado  */ {
       if(tarefasPendentes.getMostrar()[i].getNome() == x) /** SE o elemento for encontrado, será editado */{
@@ -43,7 +43,7 @@ const editarTarefaComum = () => { // Arrow Function que edita a tarefa escolhida
 }
 
 const editarTarefaComEtiqueta = () => { // Arrow Function que edita a tarefa escolhida
-  const x = document.getElementById('nomeEditarTarefaComEtiqueta').value.toUpperCase(); // Refenrenciando a tarefa que será editada.
+  const x = document.getElementById('nomeEditarTarefaComEtiqueta').value.toLowerCase(); // Refenrenciando a tarefa que será editada.
 
   for(let i = 0; i < tarefasPendentes.getMostrar().length; i++) /** Procura o elemento que será editado  */ {
     if(tarefasPendentes.getMostrar()[i].getNome() == x) /** SE o elemento for encontrado, será editado */{
@@ -63,7 +63,7 @@ const editarTarefaComEtiqueta = () => { // Arrow Function que edita a tarefa esc
 } 
 
 const editarTarefaPrioritaria = () => { // Arrow Function que edita a tarefa escolhida
-  const x = document.getElementById('nomeEditarTarefaPrioritaria').value.toUpperCase(); // Refenrenciando a tarefa que será editada.
+  const x = document.getElementById('nomeEditarTarefaPrioritaria').value.toLowerCase(); // Refenrenciando a tarefa que será editada.
 
   for(let i = 0; i < tarefasPendentes.getMostrar().length; i++) /** Procura o elemento que será editado  */ {
     if(tarefasPendentes.getMostrar()[i].getNome() == x) /** SE o elemento for encontrado, será editado */{
@@ -84,7 +84,7 @@ const editarTarefaPrioritaria = () => { // Arrow Function que edita a tarefa esc
 }
 
 const editarTarefaRepetitiva = () => { // Arrow Function que edita a tarefa escolhida
-  const x = document.getElementById('nomeEditarTarefaRepetitiva').value.toUpperCase(); // Refenrenciando a tarefa que será editada.
+  const x = document.getElementById('nomeEditarTarefaRepetitiva').value.toLowerCase(); // Refenrenciando a tarefa que será editada.
 
   for(let i = 0; i < tarefasPendentes.getMostrar().length; i++) /** Procura o elemento que será editado  */ {
     if(tarefasPendentes.getMostrar()[i].getNome() == x) /** SE o elemento for encontrado, será editado */{

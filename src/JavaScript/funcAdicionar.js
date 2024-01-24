@@ -44,7 +44,7 @@ const adicionarComum = () => { // Arrow Fuction responsável por adicionar taref
 
     let obj = new tarefa() // O objeto é criado e recebe as propriedades da classe.
 
-    obj.setInformation(document.getElementById('nomeTarefa').value.toUpperCase(), document.getElementById('descricao').value);
+    obj.setInformation(document.getElementById('nomeTarefa').value.toLowerCase(), document.getElementById('descricao').value);
 
     add(obj);
   }
@@ -59,7 +59,7 @@ const adicionarComEtiqueta = () => {
     let obj = new tarefasComEtiqueta() // O objeto é criado e recebe as propriedades da classe.
 
     obj.setInformation(
-      document.getElementById('nomeTarefaComEtiqueta').value.toUpperCase(), 
+      document.getElementById('nomeTarefaComEtiqueta').value.toLowerCase(), 
       document.getElementById('descricaoNovaTarefaComEtiqueta').value, 
       document.getElementById("etiqueta").value
       );
@@ -78,7 +78,7 @@ const adicionarPrioritaria = () => {
     let obj = new tarefasPrioridade() // O objeto é criado e recebe as propriedades da classe.
 
     obj.setInformation(
-      document.getElementById('nomeTarefaPrioritaria').value.toUpperCase(),
+      document.getElementById('nomeTarefaPrioritaria').value.toLowerCase(),
       document.getElementById('descricaoPrioritaria').value, 
       document.getElementById("prioridade").value, 
       document.getElementById("dataLimite").value
@@ -97,7 +97,7 @@ const adicionarRepetitiva = () => {
 
     let obj = new tarefaRepetitiva() // O objeto é criado e recebe as propriedades da classe.
 
-    obj.setInformation(document.getElementById('nomeTarefaRepetitiva').value.toUpperCase(), document.getElementById('descricaoRepetitiva').value, document.getElementById("frequencia").value, document.getElementById("dataInicio").value);
+    obj.setInformation(document.getElementById('nomeTarefaRepetitiva').value.toLowerCase(), document.getElementById('descricaoRepetitiva').value, document.getElementById("frequencia").value, document.getElementById("dataInicio").value);
 
     add(obj);
   }
